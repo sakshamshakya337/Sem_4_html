@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Spinner Counter</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <style>
+        #spinner {
+            display: block;
+            width: 100px;
+            height: 100px;
+            border: 16px solid #f3f3f3;
+            border-top: 16px solid #3498db;
+            border-radius: 50%;
+            animation: spin 2s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+    <script>
+        window.onload = function() {
+            let counter = 0;
+            let spinner = document.getElementById('spinner');
+            let counterDisplay = document.getElementById('counter');
+
+            spinner.addEventListener('animationiteration', () => {
+                counter++;
+                counterDisplay.textContent = counter;
+            });
+        }
+    </script>
+</head>
+<body>
+<div id="spinner"></div>
+<p id="counter">0</p>
+</body>
+</html>

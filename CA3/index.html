@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <title>Ecommerce</title>
+    <style>
+        .animate__animated {
+         animation-duration: 1s;
+         }
+
+         .animate__bounce {
+          animation-name: bounce;
+        }
+
+    @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-30px);
+    }
+    60% {
+        transform: translateY(-15px);
+    }
+    }
+
+    .navbar {
+      background-color: #f8f9fa; 
+     }
+
+    .navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+    }
+
+    .navbar-nav .nav-link {
+  color: #333; 
+  font-weight: bold;
+    }
+
+    .navbar-nav .nav-item.active .nav-link {
+  color: #007bff; 
+    }
+
+     .container {
+  padding: 20px;
+    }
+
+     h1 {
+  color: #333; 
+    }
+
+     p {
+  color: #666; 
+     }
+
+     .progress {
+      height: 5px;
+      margin: 0;
+      overflow: hidden;
+     background-color: #f8f9fa; 
+    }
+  .progress-bar {
+    background-color: #007bff; 
+    width: 0;
+    transition: width 0.5s;
+
+    .sticky-pagination {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #fff;
+    padding: 10px 0;
+   }
+
+    </style>
+</head>
+<body>
+    <div class="progress">
+    <div class="progress-bar" role="progressbar"></div>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Ecommerce bale</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Items
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Men's Clothing</a>
+                <a class="dropdown-item" href="#">Women's Clothing</a>
+                <a class="dropdown-item" href="#">Children's Clothing</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About Us</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      
+      <div class="container">
+        <h1 class="animate__animated animate__bounce">Welcome to Our Website</h1>
+        <p>Our website is the best place to find the best products at the best prices. We have a wide range of products to choose from website  </p>
+      </div>
+
+    
+
+     <div class="sticky-pagination">
+      <nav aria-label="Item Pagination">
+      <ul class="pagination justify-content-center">
+      <li class="page-item">
+        <a class="page-link" href="#" aria-label="Previous">
+          <span aria-hidden="true">&laquo;</span>
+        </a>
+      </li>
+      <li class="page-item"><a class="page-link" href="#" id="ClothBtn">Cloth Shopping</a></li>
+      <li class="page-item"><a class="page-link" href="#" id="kitchenBtn">Kitchen Utiliary</a></li>
+      <li class="page-item"><a class="page-link" href="#" id="TechBtn">Tech Gadegts</a></li>
+      <li class="page-item"><a class="page-link" href="#" id="PhonesBtn">Phones</a></li>
+      <li class="page-item"><a class="page-link" href="#" id="GymBtn">Gym Products</a></li>
+      <li class="page-item">
+        <a class="page-link" href="#" aria-label="Next">
+          <span aria-hidden="true">&raquo;</span>
+        </a>
+      </li>
+     </ul>
+      </nav>
+     </div>
+
+    
+    
+    
+    
+    <script>
+        let progressBar = document.querySelector('.progress-bar');
+        let width = 1;
+        let interval = setInterval(() => {
+            if (width >= 100) {
+                clearInterval(interval);
+            } else {
+                width++;
+                progressBar.style.width = width + '%';
+            }
+        }, 10);
+
+        const ClothBtn = document.getElementById('ClothBtn');
+      const kitchenBtn = document.getElementById('kitchenBtn');
+      const TechBtn = document.getElementById('TechBtn');
+      const PhonesBtn = document.getElementById('PhonesBtn');
+      const GymBtn = document.getElementById('GymBtn');
+      const prevBtn = document.querySelector('.pagination').querySelector('[aria-label="Previous"]');
+      const nextBtn = document.querySelector('.pagination').querySelector('[aria-label="Next"]');
+
+      ClothBtn.addEventListener('click', () => {
+        console.log("Navigating to Cloth Shopping section");
+      });
+
+      kitchenBtn.addEventListener('click', () => {
+       console.log("Navigating to Kitchen Utensils section");
+      });
+
+      TechBtn.addEventListener('click', () => {
+       console.log("Navigating to Tech Gadgets section");
+      });
+
+      PhonesBtn.addEventListener('click', () => {
+       console.log("Navigating to Tech Gadgets section");
+      });
+
+      GymBtn.addEventListener('click', () => {
+       console.log("Navigating to Tech Gadgets section");
+      });
+
+      prevBtn.addEventListener('click', () => {
+     console.log("Navigating to the previous section");
+    });
+
+    nextBtn.addEventListener('click', () => {
+     let currentSection = document.querySelector('.active-section');
+    let nextSection = currentSection.nextElementSibling;
+
+     if (nextSection) {
+     currentSection.classList.remove('active-section');
+     nextSection.classList.add('active-section');
+     console.log("Navigating to the next section");
+    } else {
+      console.log("No next section available");
+    }
+});
+
+const ClothxBtn = document.getElementById('ClothBtn');
+const pagination = document.querySelector('.sticky-pagination');
+
+ClothBtn.addEventListener('click', (event) => {
+  event.preventDefault(); 
+
+  fetch('clothing.html')
+    .then(response => response.text())
+    .then(data => {
+      document.body.innerHTML = data; 
+      document.body.appendChild(pagination); 
+    })
+    .catch(error => console.error('Error loading Cloth page:', error));
+});
+  
+kitchenBtn.addEventListener('click', (event) => {
+  event.preventDefault(); 
+
+  fetch('utensils.html')
+    .then(response => response.text())
+    .then(data => {
+      document.body.innerHTML = data; 
+      document.body.appendChild(pagination); 
+    })
+    .catch(error => console.error('Error loading Cloth page:', error));
+});
+
+TechBtn.addEventListener('click', (event) => {
+  event.preventDefault(); 
+
+  fetch('tech.html')
+    .then(response => response.text())
+    .then(data => {
+      document.body.innerHTML = data; 
+      document.body.appendChild(pagination); 
+    })
+    .catch(error => console.error('Error loading Cloth page:', error));
+});
+
+    </script>
+</body>
+</html>

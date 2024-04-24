@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tourist Places</title>
+    <style>
+        .flex-container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .tourist-place {
+            position: relative;
+            margin: 10px;
+            width: 150px;
+            height: 150px;
+            background-color: #f0f0f0;
+            border-radius: 5px;
+            overflow: hidden;
+            transition: 0.5s;
+        }
+
+        .tourist-place:hover .tooltip {
+            opacity: 1;
+        }
+
+        .tooltip {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 5px;
+            opacity: 0;
+            transition: 0.5s;
+        }
+
+        .tourist-place img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: 0.5s;
+        }
+
+        .tourist-place:hover img {
+            filter: grayscale(100%);
+        }
+    </style>
+</head>
+<body>
+    <div class="flex-container">
+        <div class="tourist-place">
+            <img src="img/1.jpg" alt="Tourist Place 1">
+            <div class="tooltip">Tourist Place in Chandigarh</div>
+        </div>
+        <div class="tourist-place">
+            <img src="img/2.jpg" alt="Tourist Place 2">
+            <div class="tooltip">Tourist Place 2</div>
+        </div>
+        <div class="tourist-place">
+            <img src="img/3.jpg" alt="Tourist Place 3">
+            <div class="tooltip">Tourist Place 3</div>
+        </div>
+        <div class="tourist-place">
+            <img src="img/4.jpg" alt="Tourist Place 4">
+            <div class="tooltip">Tourist Place 4</div>
+        </div>
+        <div class="tourist-place">
+            <img src="img/5.jpg" alt="Tourist Place 5">
+            <div class="tooltip">Tourist Place 5</div>
+        </div>
+        <div class="tourist-place">
+            <img src="img/6.jpg" alt="Tourist Place 6">
+            <div class="tooltip">Tourist Place 6</div>
+        </div>
+    </div>
+</body>
+</html>

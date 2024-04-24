@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Furniture Villa | Login Page</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+    }
+
+    .container {
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .container h2 {
+      font-family: 'Courier New', Courier, monospace;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .container form {
+      display: table;
+      width: 100%;
+    }
+
+    .container form label,
+    .container form input {
+      font-family: 'Courier New', Courier, monospace;
+      display: table-row;
+      padding: 10px;
+    }
+
+    .container form label {
+      font-family: 'Courier New', Courier, monospace;
+      font-weight: bold;
+    }
+
+    .container form input {
+      width: 100%;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      padding: 5px;
+    }
+
+    .container form input[type="submit"] {
+      background-color: #4CAF50;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    .container form input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Login</h2>
+    <form>
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" required>
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required>
+
+      <input type="submit" value="Login">
+    </form>
+  </div>
+</body>
+</html>

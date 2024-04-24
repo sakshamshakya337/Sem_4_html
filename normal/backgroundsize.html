@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Furniture Company</title>
+  <style>
+    /* Global Styles */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      color: #333;
+    }
+
+    /* Default Grid System */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .row::after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    .col {
+      float: left;
+      width: 100%;
+      padding: 0 15px;
+    }
+
+    /* Fluid Grid System */
+    .container-fluid {
+      width: 100%;
+      padding: 0 20px;
+    }
+
+    .row-fluid::after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    .col-fluid {
+      float: left;
+      width: 100%;
+      padding: 0 15px;
+    }
+
+    /* Container Layouts */
+    .header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+    }
+
+    .content {
+      padding: 20px;
+    }
+
+    .footer {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+    }
+
+    /* Image Tags */
+    .product-image {
+      width: 100%;
+      max-width: 400px;
+      height: auto;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <header class="header">
+      <h1>Furniture Company</h1>
+    </header>
+    <div class="content">
+      <h2>Welcome to our Furniture Store!</h2>
+      <p>Explore our wide range of furniture products.</p>
+      <img src="path_to_your_image.jpg" alt="Product Image" class="product-image">
+    </div>
+    <footer class="footer">
+      <p>&copy; 2022 Furniture Company. All rights reserved.</p>
+    </footer>
+  </div>
+
+  <div class="container-fluid">
+    <div class="row-fluid">
+      <div class="col-fluid">
+        <h2>Fluid Grid System</h2>
+        <p>This section demonstrates the fluid grid system.</p>
+        
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

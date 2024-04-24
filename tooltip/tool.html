@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hover Effect</title>
+    <style>
+        .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.item {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+}
+
+.text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    opacity: 1;
+    transition: opacity 0.5s;
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item tooltip">
+            <div class="tooltiptext">Hover Over Me</div>
+            <img src="img/1.jpg" alt="Image" class="image">
+        </div>
+    </div>
+
+
+    <script>
+        const item = document.querySelector('.item');
+
+item.addEventListener('mouseenter', function() {
+    item.querySelector('.text').style.opacity = 0;
+    item.querySelector('.image').style.opacity = 1;
+});
+
+item.addEventListener('mouseleave', function() {
+    item.querySelector('.text').style.opacity = 1;
+    item.querySelector('.image').style.opacity = 0;
+});
+    </script>
+</body>
+</html>

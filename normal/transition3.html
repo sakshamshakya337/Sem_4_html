@@ -1,0 +1,44 @@
+<!DOCTYPE html>  
+<html lang="en-US">  
+    <meta charset="utf-8">  
+    <head>  
+      <style>  
+        div{  
+          height: 100px;  
+          width: 400px;  
+          border: 5px dotted violet;  
+          font-size: 20px;  
+        }  
+        .outer {  
+        margin: 100px;  
+        background-color: cyan;  
+        text-align: center;  
+       }  
+     .box {  
+       background: url( "12.jpg");  
+       transform: rotate3d(3, 2, 1, 75deg);  
+       transform-origin: 70% 10% 150px;  
+     }  
+     .outer1{  
+       margin-left: 500px;  
+       background-color: cyan;  
+       text-align: center;  
+      }  
+   .box1 {  
+     background: url( "12.jpg");  
+     transform: rotate3d(2, 2, 1, 75deg);  
+     transform-origin: bottom right 200px;  
+    }  
+   </style>  
+  </head>  
+  
+<body>  
+    <h1> Example of the CSS transform-origin Property </h1>  
+    <div class="outer"> transform-origin: 70% 10% 150px;  
+    <div class="box"></div>  
+     </div>  
+    <div class="outer1"> transform-origin: bottom right 200px;  
+   <div class="box1"></div>  
+    </div>  
+  </body>  
+</html>
